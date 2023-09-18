@@ -1,42 +1,22 @@
 ﻿#include <iostream>
-using namespace std; 
-int main() {
+using namespace std;
+
+int main()
+{
 	setlocale(LC_ALL, "RU");
-	int a, b;
-	char sym;
-	cout << "Введите первое число:";
-	cin >> a;
-	cout << "Введите второе число:";
-	cin >> b;
-	int result;
-	cout << "Введите оператор:";
-	cin >> sym;
-	if (sym == '+') {
-		result = a + b;
-		cout << a << "+" << b << "=" << result;
-		exit(0);
+	int num1, num2;
+	char op;
+	cout << "Введите первое число: ";
+	cin >> num1;
+	cout << "Введите второе число: ";
+	cin >> num2;
+	cout << "Введите оператор: ";
+	cin >> op;
+	switch (op) {
+	case '+': cout << num1 << "+" << num2 << "=" << num1 + num2; break;
+	case '-': cout << num1 << "-" << num2 << "=" << num1 - num2; break;
+	case '*': cout << num1 << "*" << num2 << "=" << num1 * num2; break;
+	case '/': cout << num1 << "/" << num2 << "=" << num1 / num2; break;
+	default:cout << "ups ERROR";
 	}
-	if (sym == '-') {
-		result = a - b;
-		cout << a << "-" << b << "=" << result;
-		exit(0);
-	}
-	if (sym == '*') {
-		result = a * b;
-		cout << a << "*" << b << "=" << result;
-		exit(0);
-
-	}
-	if (sym == '/') {
-		result = a / b;
-		cout << a << "/" << b << "=" << result;
-		exit(0);
-
-	}
-	else {
-		cout << "oops ERROR";
-		exit(0);
-
-	}
-	return 0;
-} 
+}
